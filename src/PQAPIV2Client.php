@@ -17,6 +17,7 @@ use PQAPIV2Lib\Controllers;
  */
 class PQAPIV2Client implements ConfigurationInterface
 {
+    
     private $payments;
     private $transfers;
     private $spendBack;
