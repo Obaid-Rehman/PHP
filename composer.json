@@ -1,0 +1,44 @@
+{
+    "name": "obaidkhattak/pqapiv2",
+    "description": "desc",
+    "type": "library",
+    "keywords": [
+        "PQ API v2",
+        "API",
+        "SDK"
+    ],
+    "homepage": "https://www.payquicker.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "PayQuicker Support",
+            "email": "support@payquicker.com",
+            "homepage": "https://www.payquicker.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2 <8.2",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "obaidkhattak/unirest-php": "^2.2.1",
+        "obaidkhattak/jsonmapper": "^3.0.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5",
+        "phan/phan": "5.3.1",
+        "phpunit/phpunit": "^7.5 || ^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "PQAPIV2Lib\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "test-coverage": "phpunit --coverage-html=coverage",
+        "lint": "phpcs --standard=phpcs-ruleset.xml src/",
+        "lint-fix": "phpcbf --standard=phpcs-ruleset.xml src/",
+        "analyze": "phan --allow-polyfill-parser"
+    }
+}
