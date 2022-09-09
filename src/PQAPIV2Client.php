@@ -17,7 +17,6 @@ use PQAPIV2Lib\Controllers;
  */
 class PQAPIV2Client implements ConfigurationInterface
 {
-    
     private $payments;
     private $transfers;
     private $spendBack;
@@ -46,6 +45,7 @@ class PQAPIV2Client implements ConfigurationInterface
 
     public function __construct(array $configOptions = null)
     {
+        
         if (isset($configOptions['timeout'])) {
             $this->timeout = $configOptions['timeout'];
         }
